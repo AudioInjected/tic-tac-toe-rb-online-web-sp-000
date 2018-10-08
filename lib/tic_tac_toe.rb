@@ -114,3 +114,16 @@ def over?(board)
     return true
   end
 end
+
+def winner(board)
+  if won?(board)
+    winner = won?(board)
+    if board[winner[0]] == "X" && board[winner[1]] == "X" && board[winner[2]] == "X"
+      return "X"
+    elsif board[winner[0]] == "O" && board[winner[1]] == "O" && board[winner[2]] == "O"
+      return "O"
+    end
+  else
+    return nil
+  end
+end
