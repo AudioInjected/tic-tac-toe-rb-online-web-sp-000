@@ -137,9 +137,9 @@ def play(board)
   end
   if winner(board) == "X"
     puts "Congratulations X!"
-  elsif winner(board) == "O!"
-    puts "Congratulations O"
+  elsif winner(board) == "O"
+    puts "Congratulations O!"
   elsif draw?(board)
-    print "Cat's Game!"
+    puts "Cat's Game!"
   end
 end
