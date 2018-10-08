@@ -84,11 +84,5 @@ def won?(board)
       return false
     end
   end
-  i = 1
-  for empty_board in board
-    if position_taken?(board, i)
-    return false
-     i += 1
-    end
-  end
+
 end
