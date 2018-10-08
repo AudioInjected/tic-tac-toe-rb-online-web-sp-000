@@ -94,6 +94,19 @@ def won?(board)
   end
 end
 
+def full?(board)
+  i = 0
+  until i == board.length
+    if position_taken?(board, i)
+      full_board = true
+    else
+      return false
+    end
+    i += 1
+  end
+  return full_board
+end
+
 =begin
 def full?(board)
   if position_taken?(board, 0) && position_taken?(board, 1) && position_taken?(board, 2) && position_taken?(board, 3) && position_taken?(board, 4) && position_taken?(board, 5) && position_taken?(board, 6) && position_taken?(board, 7) && position_taken?(board, 8)
