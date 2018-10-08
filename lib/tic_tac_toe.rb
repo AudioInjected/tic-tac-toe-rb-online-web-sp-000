@@ -90,3 +90,27 @@ for empty_board in board
   end
 end
 end
+
+def full?(board)
+  if position_taken?(board, 0) && position_taken?(board, 1) && position_taken?(board, 2) && position_taken?(board, 3) && position_taken?(board, 4) && position_taken?(board, 5) && position_taken?(board, 6) && position_taken?(board, 7) && position_taken?(board, 8)
+    return true
+  else
+    return false
+  end
+end
+
+def draw?(board)
+  if !won?(board) && full?(board)
+    return true
+  else
+    return false
+  end
+end
+
+def over?(board)
+  if !full?(board)
+    return false
+  elsif won?(board) || draw?(board) || full?(board)
+    return true
+  end
+end
