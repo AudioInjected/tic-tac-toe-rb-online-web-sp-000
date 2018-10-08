@@ -77,10 +77,10 @@ end
 def won?(board)
   WIN_COMBINATIONS.each do |win|
     if board[win[0]] == "X" && board[win[1]] == "X" && board[win[2]] == "X"
-      won = true
+
       return win
     elsif board[win[0]] == "O" && board[win[1]] == "O" && board[win[2]] == "O"
-      won = true
+
       return win
     else
       won = false
