@@ -83,12 +83,15 @@ def won?(board)
     end
   end
   i = 1
-for empty_board in board
-  if position_taken?(board, i)
-  return false
-   i += 1
+  for empty_board in board
+    if position_taken?(board, i)
+    return false
+     i += 1
+    end
   end
-end
+  if !full?(board)
+    return false
+  end
 end
 
 def full?(board)
